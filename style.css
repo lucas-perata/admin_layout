@@ -3,11 +3,10 @@
     padding: 0;
 }
 
-@media screen and (max-width: 800px) {
-    .container, .main, .right {
-      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-    }
-  }
+:root{
+    --main-radius: 50px;
+}
+
 
 button {
     cursor:pointer;
@@ -21,20 +20,29 @@ button {
 }
 
 header {
-    background-color: blue;
+    background-color: rgb(0, 0, 0);
     grid-column:  2 ;
     display: grid;
     grid-template-rows: 50% 50%;
+    z-index: 1;
+    box-shadow: 0px 8px 7px rgb(206, 206, 206);
 }
 
 header .up{
-    background-color: aqua;
+    background-color: rgb(244, 255, 255);
     
     grid-row: span 1;
+
+    display: grid;
+
+    grid-auto-flow: column;   
+    grid-template-columns: repeat(auto-fill, 5vw);
+    align-items: center;
+    
 }
 
 header .down {
-    background-color: rgb(65, 43, 85);
+    background-color: rgb(255, 255, 255);
     
     grid-row: 2;
 }
@@ -42,11 +50,43 @@ header .down {
 input {
     border-radius: 20px;
     border-style: none;
+    width: 35vw;
+    font-size: large;
+    background-color: rgb(144, 144, 144);
+    opacity: 0.2;
+}
+
+form {
+    grid-column: 2/10;
 }
 
  .search { 
      border-style: none;
-    background-color: aqua;
+    background-color: white;
+    font-size: larger;
+}
+
+
+.bell{
+    grid-column: 14;
+    width: fit-content;
+    align-self: center;
+    margin: auto;
+
+    font-size: xx-large;
+    background-color: rgb(253, 255, 255);
+    border-style: none;
+
+}
+
+img {
+    width: 3.8vw;
+    border-radius: var(--main-radius);
+    grid-column: 15;
+}
+
+.user-name {
+    grid-column: 16;
 }
 
 
@@ -61,7 +101,7 @@ input {
 }
 
 .sidebar > .layout, .sidebar > h2{
-margin-top: 1.5vh;
+margin-top: 3vh;
 margin-left: 1.5vw;
 color: rgb(224, 214, 214);
 }
@@ -107,7 +147,7 @@ color: rgb(224, 214, 214);
 
 
 main {
-    background-color: rgb(164, 126, 126);
+    background-color: rgb(244, 237, 237);
     grid-column: 2;
     grid-row: 2;
 
@@ -140,7 +180,14 @@ main .content{
 }
 
 .content .card{
-    background-color: rgb(52, 66, 66);
+    background-color: rgb(251, 255, 255);
+
+    border-left: solid;
+    border-left-color: rgb(234, 234, 6);
+    border-left-width: 8px;
+    border-radius: 20px;
+
+    
 
     
 }
