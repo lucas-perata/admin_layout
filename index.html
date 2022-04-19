@@ -5,16 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Admin Layout</title>
 </head>
 <body>
     <div class="container">
+
         <header>
             <div class="up">
             <form id="form"> 
-                <button>Search</button>
-                <input type="search" id="query" name="q" placeholder="...">
+                <button class="search"><i class="fa fa-search"></i> </button>
+                <input type="search" id="query" name="q" placeholder="Search anything...">
               </form>
+
+            <button><i class="fa fa-bell-o"></i> </button>  
             </div>
 
             <div class="down">
@@ -68,7 +72,18 @@
         </main>
 
         <div class="sidebar">
-            SIDEBAR
+            <h2> <i class="fa fa-pie-chart"></i> Dashboard</h2>
+            <div class="layout">
+              <button class="btn"><i class="fa fa-home"></i> Home</button>
+              <button class="btn"><i class="fa fa-user"></i> Profile</button>
+              <button class="btn"><i class="fa fa-commenting"></i> Messages</button>
+              <button class="btn"> <i class="fa fa-history"></i> History</button>
+              <button class="btn"><i class="fa fa-tasks"></i> Task</button>
+              <button class="btn"><i class="fa fa-users"></i> Communities</button>
+                 <button class="btn" id="settings"><i class="fa fa-wrench"></i> Settings</button>
+             <button class="btn" id="support"><i class="fa fa-question"></i> Support</button>  
+             <button class="btn" id="privacy"><i class="fa fa-user-secret"></i> Privacy</button>
+            </div>
         </div>
 
     </div>
